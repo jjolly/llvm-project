@@ -121,20 +121,49 @@ A _multidimensional affine expression_ is a comma separated list of
 one-dimensional affine expressions, with the entire list enclosed in
 parentheses.
 
+[//]: # (The LaTeX image tags were generated using)
+[//]: # (https://alexanderrodin.com/github-latex-markdown/)
+
 **Context:** An affine function, informally, is a linear function plus a
-constant. More formally, a function f defined on a vector $$\vec{v} \in
-\mathbb{Z}^n$$ is a multidimensional affine function of $$\vec{v}$$ if
-$$f(\vec{v})$$ can be expressed in the form $$M \vec{v} + \vec{c}$$ where $$M$$
-is a constant matrix from $$\mathbb{Z}^{m \times n}$$ and $$\vec{c}$$ is a
-constant vector from $$\mathbb{Z}$$. $$m$$ is the dimensionality of such an
-affine function. MLIR further extends the definition of an affine function to
-allow 'floordiv', 'ceildiv', and 'mod' with respect to positive integer
-constants. Such extensions to affine functions have often been referred to as
-quasi-affine functions by the polyhedral compiler community. MLIR uses the term
-'affine map' to refer to these multidimensional quasi-affine functions. As
-examples, $$(i+j+1, j)$$, $$(i \mod 2, j+i)$$, $$(j, i/4, i \mod 4)$$, $$(2i+1,
-j)$$ are two-dimensional affine functions of $$(i, j)$$, but $$(i \cdot j,
-i^2)$$, $$(i \mod j, i/j)$$ are not affine functions of $$(i, j)$$.
+constant. More formally, a function f defined on a vector
+![\vec{v} \in \mathbb{Z}^n](https://render.githubusercontent.com/render/math?math=%5Cvec%7Bv%7D%20%5Cin%20%5Cmathbb%7BZ%7D%5En)
+is a multidimensional affine function of
+![\vec{v}](https://render.githubusercontent.com/render/math?math=%5Cvec%7Bv%7D)
+if
+![f(\vec{v})](https://render.githubusercontent.com/render/math?math=f(%5Cvec%7Bv%7D))
+can be expressed in the form
+![M \vec{v} + \vec{c}](https://render.githubusercontent.com/render/math?math=M%20%5Cvec%7Bv%7D%20%2B%20%5Cvec%7Bc%7D)
+where
+![M](https://render.githubusercontent.com/render/math?math=M)
+is a constant matrix from
+![\mathbb{Z}^{m \times n}](https://render.githubusercontent.com/render/math?math=%5Cmathbb%7BZ%7D%5E%7Bm%20%5Ctimes%20n%7D)
+and
+![\vec{c}](https://render.githubusercontent.com/render/math?math=%5Cvec%7Bc%7D)
+is a constant vector from
+![\mathbb{Z}](https://render.githubusercontent.com/render/math?math=%5Cmathbb%7BZ%7D)
+. The dimensionality of such an affine function is
+![m](https://render.githubusercontent.com/render/math?math=m)
+. MLIR further extends the definition of an affine function to allow 'floordiv',
+'ceildiv', and 'mod' with respect to positive integer constants. Such extensions
+to affine functions have often been referred to as quasi-affine functions by the
+polyhedral compiler community. MLIR uses the term 'affine map' to refer to these
+multidimensional quasi-affine functions. As examples,
+![(i+j+1, j)](https://render.githubusercontent.com/render/math?math=(i%2Bj%2B1%2C%20j))
+,
+![(i \mod 2, j+i)](https://render.githubusercontent.com/render/math?math=(i%20%5Cmod%202%2C%20j%2Bi))
+,
+![(j, i/4, i \mod 4)](https://render.githubusercontent.com/render/math?math=(j%2C%20i%2F4%2C%20i%20%5Cmod%204))
+, and
+![(2i+1, j)](https://render.githubusercontent.com/render/math?math=(2i%2B1%2C%20j))
+are two-dimensional affine functions of
+![(i, j)](https://render.githubusercontent.com/render/math?math=(i%2C%20j))
+, but
+![(i \cdot j, i^2)](https://render.githubusercontent.com/render/math?math=(i%20%5Ccdot%20j%2C%20i%5E2))
+, and
+![(i \mod j, i/j)](https://render.githubusercontent.com/render/math?math=(i%20%5Cmod%20j%2C%20i%2Fj))
+are not affine functions of
+![(i, j)](https://render.githubusercontent.com/render/math?math=(i%2C%20j))
+.
 
 ### Affine Maps
 
