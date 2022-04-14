@@ -1,0 +1,3 @@
+set(LLVM_TARGET_DEFINITIONS SparseIteratorTransforms.td)
+mlir_tablegen(SparseIteratorTransforms.h.inc -gen-rewriters)
+add_public_tablegen_target(MLIRSparseIteratorTranformIncGen)
